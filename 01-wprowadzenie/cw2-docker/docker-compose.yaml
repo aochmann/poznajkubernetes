@@ -1,0 +1,18 @@
+version: '3'
+
+services: 
+  go-app-first-example:
+    image: 'go-app-first-example:${TAG_NAME}'
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports: 
+      - '8088:8080'
+  
+  go-app-second-example:
+    image: go-app-second-example:dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports: 
+      - '8089:8080'
