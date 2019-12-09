@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  name: busybox
+  labels:
+    name: busybox
+spec:
+  containers:
+  - name: busybox
+    image: busybox:1
+    resources: {}
+    imagePullPolicy: IfNotPresent
+    command: ['sleep']
+    args: ['3500']
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}
